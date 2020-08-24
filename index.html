@@ -1,0 +1,49 @@
+<html>
+
+
+<head>
+<title>Hide/Show password project</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="formbox">
+        <h1>LOGIN Here</h1>
+        <div class="inputbox">
+            <i class="fa fa-envelope" ></i>
+            <input type="email" placeholder="Email">
+        </div>
+        <div class="inputbox">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input  id="myinput" type="password" placeholder="password">
+            <span class="eye" onclick="myFunction()">
+                <i  id="hide1"class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash" ></i>
+            </span>
+        </div>
+        <button type="button" class="loginbtn">LOGIN</button>
+
+    </div>
+
+    <script>
+        function myFunction(){
+            var x=document.getElementById("myinput");
+            var y=document.getElementById("hide1");
+            var z=document.getElementById("hide2");
+            if(x.type === 'password'){
+                x.type="text";
+                y.style.display="block";
+                z.style.display="none";
+            }
+            else{
+                x.type="password";
+                y.style.display="none";
+                z.style.display="block";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
